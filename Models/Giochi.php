@@ -1,4 +1,7 @@
 <?php
-    class Giochi extends Prodotti{
-
-    }
+class Giochi extends Prodotti
+{
+    //PROPRIETA'
+    private $features;
+    private $sizes;
+}
