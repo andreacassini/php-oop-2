@@ -2,17 +2,25 @@
 class Prodotti
 {
     //AGGIUNGO PROPRIETA'
-    protected $title;
-    protected $image;
+    public $title;
+    public $image;
+    public $category;
     protected $price;
-    protected $category;
 
     //METODI
-    function __construct($title, $image, $price, $category)
+    function __construct(String $image, String $title, String $category)
     {
-        $this->title = $title;
         $this->image = $image;
-        $this->price = $price;
+        $this->title = $title;
         $this->category = $category;
+        $this->price = "ND";
+    }
+    public function setPrice(Float $price)
+    {
+        $this->price = "€ " . $price;
+    }
+    public function getPrice()
+    {
+        return $this->price;
     }
 }
